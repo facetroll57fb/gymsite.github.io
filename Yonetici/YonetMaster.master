@@ -1,0 +1,54 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="YonetMaster.master.cs" Inherits="YonetMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>Yönetici Paneli</title>
+
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Kanit:500,600&display=swap&subset=latin-ext" rel="stylesheet" />
+    <link href="../css/panel.css" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Kanit', sans-serif;
+        }
+    </style>
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $('#showpass').hover(function (show) {
+                //Change the attribute to text  
+
+                $('#sifre').attr("type", "text");
+                $('#showpass').text("Sifre gosteriliyor...");
+            },
+            function () {
+                //Change the attribute back to password  
+                $('#sifre').attr("type", "password");
+                $('#showpass').text("Sifreyi goster");
+            });
+        });
+    </script>
+
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+
+
+    <script src="../js/panel.js"></script>
+</body>
+</html>

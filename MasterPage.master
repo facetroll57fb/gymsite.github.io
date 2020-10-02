@@ -1,0 +1,69 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPage.master.vb" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Uye MasterPage</title>
+    <link href="../css/bootstrap.css" rel="stylesheet" />
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Kanit&display=swap&subset=latin-ext" rel="stylesheet" />
+    <link href="../css/stil.css" rel="stylesheet" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <style>
+        .btncss {
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="container-fluid" style="background-color: #f5f6f7;">
+            <div class="container">
+                <nav class="navbar navbar-expand-md">
+                    <a href="Default.aspx" class="navbar-brand">
+                        <img src="../Resimler/page/logo.png" />
+                    </a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav">
+                            <a href="#" class="nav-item nav-link number">08501231231</a>
+                        </div>
+                        <div>
+                            <input type="search" class="form-control sbar" placeholder="Ne aramıştınız?" />
+                        </div>
+                        <div class="navbar-nav">
+                            <a href="Uye/LoginPage.aspx" class="nav-item nav-link">Üye Girişi</a>
+                            <a href="#" class="nav-item nav-link disabled">&</a>
+                            <a href="UyeKaydol.aspx" class="nav-item nav-link">Üye Ol</a>
+                        </div>
+                        <div>
+                            <asp:LinkButton ID="LinkButton1" runat="server" CssClass="btn btn-xs btn-link btncss">
+                                <i class="fa fa-shopping-cart" style="color: #8286C5"></i>
+                            </asp:LinkButton>
+                            <span class="badge badge-notify text-white" style="font-size: 12px;">0</span>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <footer class="bg-light shadow-lg">
+            <div class="text-center py-4">
+                Tüm hakları saklıdır. İzinsiz kullanılması ve düzenlenmesi tamamen yasaktır. &copy Copyright 2019, <strong>XGYM</strong>
+            </div>
+        </footer>
+    </form>
+</body>
+</html>
